@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 
+import TopicSection from '../components/topicSection';
+
 const Root = styled.div`
   font-family: 'Lora', 'Times New Roman';
   color: white;
@@ -26,13 +28,21 @@ const Subtitle = styled.p`
   }
 `;
 
+const MainContent = styled.div`
+  margin-top: 128px;
+`;
+
 const IndexPage = ({ data }) => {
-  console.log(data);
+  const airtableRows = data.allAirtable.edges;
 
   return (
     <Root>
       <SiteTitle>On Black People & Medicine</SiteTitle>
       <Subtitle>An ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>. </Subtitle>
+
+      <MainContent>
+        <TopicSection topic={"Test"} contentEdges={airtableRows} />
+      </MainContent>
     </Root>
   );
 };
@@ -43,12 +53,12 @@ export const query = graphql`
       edges {
         node {
           data {
-            Content
-            Type
-            Is_Quote
-            Section
-            Year
-            Link
+            content: Content
+            type: Type
+            isQuote: Is_Quote
+            section: Section
+            year: Year
+            link: Link
           }
         }
       }
