@@ -3,24 +3,24 @@ import styled from "styled-components";
 
 const Content = styled.p`
   font-size: 24px;
+  margin-bottom: 16px;
 `;
 
 const DetailText = styled.p`
-font-size: 12px;
+font-size: 16px;
 `;
 
 const ContentItem = ({ 
   content, 
   type, 
   // isQuote, 
-  // section, 
-  // year, 
+  year, 
   // link
 }) => {
   return (
     <div>
-      <DetailText>{type}</DetailText>
       <Content>{content}</Content>
+      <DetailText>{`${year} • ${type}`}</DetailText>
     </div>
   );
 };

@@ -9,6 +9,7 @@ const Root = styled.div`
   font-family: 'Lora', 'Times New Roman';
   color: white;
   margin: 32px 64px;
+  line-height: normal;
 `;
 
 const SiteTitle = styled.h1`

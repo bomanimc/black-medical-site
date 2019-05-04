@@ -7,7 +7,7 @@ const Topic = styled.h3`
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 36px 0px;
+  margin: 64px 0px 24px 0px;
 `;
 
 const Content = styled.div`
@@ -18,7 +18,7 @@ const Content = styled.div`
 
 const TopicSection = ({ topic, contentData }) => {
   const contentItems = contentData.map(data => 
-    <ContentItem content={data.content} type={data.type} />
+    <ContentItem content={data.content} type={data.type} year={data.year} />
   );
 
   return (
