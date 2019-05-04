@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
+import { List } from 'immutable';
 
 import TopicSection from '../components/topicSection';
 
@@ -32,16 +33,28 @@ const MainContent = styled.div`
   margin-top: 128px;
 `;
 
+const prepareData = data => {
+  const edges = data.allAirtable.edges;
+  const contentData = List(edges.map(edge => edge.node.data));
+  return contentData.groupBy(data => data.section);
+}
+
 const IndexPage = ({ data }) => {
-  const airtableRows = data.allAirtable.edges;
+  const contentBySections = prepareData(data);
+
+  const topicSections = contentBySections.map((contentData, topicSection) => {
+    return <TopicSection key={topicSection} topic={topicSection} contentData={contentData.toArray()} />; 
+  });
 
   return (
     <Root>
       <SiteTitle>On Black People & Medicine</SiteTitle>
-      <Subtitle>An ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>. </Subtitle>
+      <Subtitle>
+        An ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>.
+      </Subtitle>
 
       <MainContent>
-        <TopicSection topic={"Test"} contentEdges={airtableRows} />
+        {topicSections.valueSeq().toArray()}
       </MainContent>
     </Root>
   );
