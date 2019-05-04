@@ -10,6 +10,12 @@ const Topic = styled.h3`
   margin: 36px 0px;
 `;
 
+const Content = styled.div`
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+`;
+
 const TopicSection = ({ topic, contentData }) => {
   const contentItems = contentData.map(data => 
     <ContentItem content={data.content} type={data.type} />
@@ -18,7 +24,9 @@ const TopicSection = ({ topic, contentData }) => {
   return (
     <div>
       <Topic>{topic}</Topic>
-      {contentItems}
+      <Content>
+        {contentItems}
+      </Content>
     </div>
   );
 };

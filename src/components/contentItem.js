@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Content = styled.p`
-  font-size: 36px;
+  font-size: 24px;
 `;
 
 const DetailText = styled.p`
