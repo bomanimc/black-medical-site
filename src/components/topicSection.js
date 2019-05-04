@@ -18,7 +18,12 @@ const Content = styled.div`
 
 const TopicSection = ({ topic, contentData }) => {
   const contentItems = contentData.map(data => 
-    <ContentItem content={data.content} type={data.type} year={data.year} />
+    <ContentItem 
+      content={data.content} 
+      link={data.link} 
+      type={data.type} 
+      year={data.year}
+    />
   );
 
   return (

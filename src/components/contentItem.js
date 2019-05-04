@@ -7,20 +7,34 @@ const Content = styled.p`
 `;
 
 const DetailText = styled.p`
-font-size: 16px;
+  font-size: 16px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: white;
+  }
 `;
 
 const ContentItem = ({ 
   content, 
   type, 
-  // isQuote, 
   year, 
-  // link
+  link,
+  // isQuote
 }) => {
+  link = <a href={link}>Go to Source</a>;
+  
   return (
     <div>
       <Content>{content}</Content>
-      <DetailText>{`${year} • ${type}`}</DetailText>
+      <DetailText>{`${year} • ${type} • `}{link}</DetailText>
     </div>
   );
 };
