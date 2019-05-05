@@ -23,6 +23,11 @@ const Subtitle = styled.p`
 
   a {
     color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   a:visited {
@@ -49,9 +54,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <Root>
-      <SiteTitle>On Black People & Medicine</SiteTitle>
+      <SiteTitle>On Blackness & Medicine</SiteTitle>
       <Subtitle>
-        An ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>.
+        Notes from an ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>.
       </Subtitle>
 
       <MainContent>
