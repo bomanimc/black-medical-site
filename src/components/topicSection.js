@@ -23,6 +23,7 @@ const Content = styled.div`
 const TopicSection = ({ topic, contentData }) => {
   const contentItems = contentData.map(data => 
     <ContentItem 
+      key={data.link}
       content={data.content} 
       link={data.link} 
       type={data.type} 
