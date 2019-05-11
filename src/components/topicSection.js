@@ -8,6 +8,10 @@ const Topic = styled.h3`
   font-weight: bold;
   text-transform: uppercase;
   margin: 64px 0px 24px 0px;
+
+  @media (max-width: 1000px) {
+    font-size: 24px;
+  }
 `;
 
 const Content = styled.div`
@@ -16,7 +20,7 @@ const Content = styled.div`
   grid-template-columns: repeat(2, minmax(300px, 1fr));
 
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 `;
 

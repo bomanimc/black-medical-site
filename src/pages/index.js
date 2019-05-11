@@ -10,16 +10,28 @@ const Root = styled.div`
   color: white;
   margin: 32px 64px;
   line-height: normal;
+
+  @media (max-width: 1000px) {
+    margin: 8px 16px;
+  }
 `;
 
 const SiteTitle = styled.h1`
   font-size: 72px;
   font-weight: bold;
+
+  @media (max-width: 1000px) {
+    font-size: 48px;
+  }
 `;
 
 const Subtitle = styled.p`
   font-size: 24px;
   margin: 16px 0px;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
 
   a {
     color: white;
@@ -37,6 +49,10 @@ const Subtitle = styled.p`
 
 const MainContent = styled.div`
   margin-top: 128px;
+
+  @media (max-width: 1000px) {
+    margin-top: 64px;
+  }
 `;
 
 const prepareData = data => {

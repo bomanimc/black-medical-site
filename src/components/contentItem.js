@@ -4,6 +4,10 @@ import styled from "styled-components";
 const Content = styled.p`
   font-size: 24px;
   margin-bottom: 16px;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
 `;
 
 const DetailText = styled.p`
@@ -19,6 +23,10 @@ const DetailText = styled.p`
 
   a:visited {
     color: white;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
   }
 `;
 
