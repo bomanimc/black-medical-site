@@ -48,7 +48,7 @@ const Subtitle = styled.p`
 `;
 
 const MainContent = styled.div`
-  margin-top: 128px;
+  margin-top: 96px;
 
   @media (max-width: 1000px) {
     margin-top: 64px;
