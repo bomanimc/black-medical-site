@@ -40,12 +40,12 @@ const ContentItem = ({
   year, 
   link,
   sourceTitle,
-  // isQuote
 }) => {
+  const sourceTitleLink = <SourceTitle href={link} target="_blank" rel="noopener noreferrer">{sourceTitle}</SourceTitle>;
   return (
     <div>
       <Content>{content}</Content>
-      <DetailText>Taken from <SourceTitle href={link}>{sourceTitle}</SourceTitle>{` • ${year} • ${type}`}</DetailText>
+      <DetailText>Taken from {sourceTitleLink}{` • ${year} • ${type}`}</DetailText>
     </div>
   );
 };
