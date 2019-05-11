@@ -94,6 +94,7 @@ export const query = graphql`
             section: Section
             year: Year
             link: Link
+            sourceTitle: Source_Title
           }
         }
       }

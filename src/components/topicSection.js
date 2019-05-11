@@ -32,6 +32,7 @@ const TopicSection = ({ topic, contentData }) => {
       link={data.link} 
       type={data.type} 
       year={data.year}
+      sourceTitle={data.sourceTitle}
     />
   );
 

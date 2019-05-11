@@ -30,19 +30,22 @@ const DetailText = styled.p`
   }
 `;
 
+const SourceTitle = styled.a`
+  font-style: italic;
+`;
+
 const ContentItem = ({ 
   content, 
   type, 
   year, 
   link,
+  sourceTitle,
   // isQuote
 }) => {
-  link = <a href={link}>Go to Source</a>;
-  
   return (
     <div>
       <Content>{content}</Content>
-      <DetailText>{`${year} • ${type} • `}{link}</DetailText>
+      <DetailText>Taken from <SourceTitle href={link}>{sourceTitle}</SourceTitle>{` • ${year} • ${type}`}</DetailText>
     </div>
   );
 };
