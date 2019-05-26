@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import { List } from 'immutable';
+import SEO from "../components/seo"
 
 import TopicSection from '../components/topicSection';
 
@@ -70,6 +71,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Root>
+      <SEO title="Home" />
       <SiteTitle>On Blackness & Medicine</SiteTitle>
       <Subtitle>
         Notes from an ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>.
