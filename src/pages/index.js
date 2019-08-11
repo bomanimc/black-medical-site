@@ -75,7 +75,6 @@ const IndexPage = ({ data }) => {
       <SiteTitle>On Blackness & Medicine</SiteTitle>
       <Subtitle>
         Notes from an ongoing research project by <a href="http://bomani.xyz/">Bomani Oseni McClendon</a>.
-        These notes were collected during the research process for <a>Informed Consent</a> and <a>Black Health: A Collection of References to Black People on WebMD</a>.
       </Subtitle>
 
       <MainContent>
